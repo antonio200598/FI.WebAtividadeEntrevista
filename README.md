@@ -28,5 +28,5 @@ Realizar melhorias no sistema **`FI.WebAtividadeEntrevista`** para fins de avali
 
 ## Execução  
 1. Abrir a solution no **Visual Studio 2022**.  
-2. Antes de executar, restaurar os pacotes, compilar e rodar a aplicação.  
+2. Antes de executar, restaurar os pacotes, compilar(clean build -> rebuild) e rodar a aplicação.  
 3. Realizar os testes na aba **Clientes**.
