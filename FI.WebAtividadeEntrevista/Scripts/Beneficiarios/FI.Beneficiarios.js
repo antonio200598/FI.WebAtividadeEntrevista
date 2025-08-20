@@ -8,6 +8,24 @@ $(document).ready(function () {
             return;
         }
 
+        const cpfFormatado = formatarCPF(cpf);
+        let cpfJaExiste = false;
+
+        $('#listaBeneficiarios tbody tr').each(function () {
+
+            const cpfExistente = $(this).find('td:eq(1)').text().trim();
+
+            if (cpfExistente === cpfFormatado) {
+                cpfJaExiste = true;
+                return false;
+            }
+        });
+
+        if (cpfJaExiste) {
+            ModalDialog("Erro", "Este CPF consta na lista de beneficiarios do cliente");
+            return;
+        }
+
         var novaLinha = `
             <tr>
                 <td class="hidden-xs hidden">0</td>
